@@ -38,7 +38,7 @@ body{
 
 .principal .fale-comigo .container{
     color: white;
-    width: 90%;
+    width: auto;
     padding: 0px 40px;
 }
 
@@ -155,6 +155,10 @@ select:-webkit-autofill:focus {
 
 @media(max-width: 1024px){
 
+    .principal .imagem img{
+        height: 500px;
+    }
+
     .principal .fale-comigo .container .formulario{
         display: grid;
         grid:
@@ -166,10 +170,17 @@ select:-webkit-autofill:focus {
     }
 }
 
+@media(max-width: 880px){
+    .principal .imagem img{
+        height: 450px;
+    }
+    
+}
+
 @media(max-width: 768px){
     .principal{
         display: flex;
-        /* flex-direction: column-reverse; */
+        flex-direction: column-reverse;
         justify-content: space-around;
         height: 100%;
         width: auto;
@@ -181,7 +192,7 @@ select:-webkit-autofill:focus {
     }
     
     .principal .imagem img{
-        height: 350px;
+        height: 400px;
     }
       
     .principal .fale-comigo{
@@ -194,13 +205,7 @@ select:-webkit-autofill:focus {
     
     .principal .fale-comigo .container{
         width: 100vw;
-    }
-
-}
-
-@media(max-width: 688px){
-    .principal{
-        flex-direction: column-reverse;
+        padding: 0px 0px;
     }
 
     .principal .fale-comigo .container .formulario{
@@ -210,17 +215,19 @@ select:-webkit-autofill:focus {
         "mensagem mensagem"/ 1fr 1fr;
     }
 
+}
+
+@media(max-width: 688px){
+    .principal{
+        flex-direction: column-reverse;
+    }
+
     .principal .imagem a{
         margin-bottom: 100px;
     }
 }
 
-
-@media(max-width: 425px){
-    .principal .imagem img{
-        height: 300px;
-    }
-
+@media(max-width:520px){
     .principal .fale-comigo .container .formulario{
         display: grid;
         grid:
@@ -230,7 +237,13 @@ select:-webkit-autofill:focus {
         "mensagem"/ 1fr;
         gap: 10px;
     }
+}
 
+
+@media(max-width: 425px){
+    .principal .imagem img{
+        height: 300px;
+    }
     .principal .fale-comigo .container h1{
         font-size: 3rem;
     }
@@ -239,8 +252,5 @@ select:-webkit-autofill:focus {
         font-size: 1.5rem;
 
     }
-
-    
-
 }
 
