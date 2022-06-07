@@ -1,0 +1,246 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, #1c313a, #000000);
+
+}
+
+.principal{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    max-width: 1440px;
+}
+
+.principal .imagem{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 50vw;
+}
+
+.principal .imagem img{
+    height: 600px;
+}
+
+
+.principal .fale-comigo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 50vw;
+}
+
+.principal .fale-comigo .container{
+    color: white;
+    width: 90%;
+    padding: 0px 40px;
+}
+
+.principal .fale-comigo .container h1{
+    font-size: 5rem;
+    font-weight: 700;
+    color: #00e5ff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.principal .fale-comigo .container p{
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.nome{
+    grid-area: nome;
+}
+
+.email{
+    grid-area: email;
+}
+
+.assunto{
+    grid-area: assunto;
+}
+
+.mensagem{
+    grid-area: mensagem;
+}
+
+.enviar-mensagem{
+    grid-area: enviar;
+}
+
+.principal .fale-comigo .container .formulario{
+    display: grid;
+    grid:
+    "nome email" 50px
+    "assunto assunto" 50px
+    "mensagem mensagem"/ 1fr 1fr;
+    gap: 10px;
+}
+
+.principal .fale-comigo .container .formulario .nome,
+.principal .fale-comigo .container .formulario .email,
+.principal .fale-comigo .container .formulario .assunto,
+.principal .fale-comigo .container .formulario .mensagem{
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    background-color: hsla(0, 1%, 28%, 0.259);
+    color: white;
+}
+
+
+
+.principal .fale-comigo .container .formulario .mensagem{
+    resize: vertical;
+}
+
+.principal .fale-comigo .container .formulario .nome::placeholder,
+.principal .fale-comigo .container .formulario .email::placeholder,
+.principal .fale-comigo .container .formulario .assunto::placeholder,
+.principal .fale-comigo .container .formulario .mensagem::placeholder{
+    color:#66eaf840 ;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 100px rgba(23, 23, 23, 0.850) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.principal .fale-comigo .container .formulario .enviar{
+    align-self: end;
+    height: 50px;
+    background-color: #00000000;
+    color: #00e5ff;
+    font-size: 1.7rem;
+    border: solid 1px #00e5ff;
+    transition: ease 1s;
+    cursor: pointer;
+    outline: none;
+}
+
+.principal .fale-comigo .container .formulario .enviar:hover{
+    background-color: #00e5ff;
+    color: #1c313a;
+}
+
+/* VALIDADOR */
+.principal .fale-comigo .container .formulario .preenchido{
+    border-bottom: solid #00e5ff;
+}
+
+.principal .fale-comigo .container .formulario .pendente{
+    border-bottom: solid #ff0000;
+}
+
+/* RESPONSIVO */
+
+@media(max-width: 1024px){
+
+    .principal .fale-comigo .container .formulario{
+        display: grid;
+        grid:
+        "nome" 50px
+        "email" 50px
+        "assunto" 50px
+        "mensagem"/ 1fr;
+        gap: 10px;
+    }
+}
+
+@media(max-width: 768px){
+    .principal{
+        display: flex;
+        /* flex-direction: column-reverse; */
+        justify-content: space-around;
+        height: 100%;
+        width: auto;
+    }
+
+    .principal .imagem{
+        height: 100%;
+        width: auto;
+    }
+    
+    .principal .imagem img{
+        height: 350px;
+    }
+      
+    .principal .fale-comigo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 50vw;
+    }
+    
+    .principal .fale-comigo .container{
+        width: 100vw;
+    }
+
+}
+
+@media(max-width: 688px){
+    .principal{
+        flex-direction: column-reverse;
+    }
+
+    .principal .fale-comigo .container .formulario{
+        grid:
+        "nome email" 50px
+        "assunto assunto" 50px
+        "mensagem mensagem"/ 1fr 1fr;
+    }
+
+    .principal .imagem a{
+        margin-bottom: 100px;
+    }
+}
+
+
+@media(max-width: 425px){
+    .principal .imagem img{
+        height: 300px;
+    }
+
+    .principal .fale-comigo .container .formulario{
+        display: grid;
+        grid:
+        "nome" 50px
+        "email" 50px
+        "assunto" 50px
+        "mensagem"/ 1fr;
+        gap: 10px;
+    }
+
+    .principal .fale-comigo .container h1{
+        font-size: 3rem;
+    }
+    
+    .principal .fale-comigo .container p{
+        font-size: 1.5rem;
+
+    }
+
+    
+
+}
+

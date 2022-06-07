@@ -1,0 +1,14 @@
+main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    background-image: linear-gradient(to right, #1c313a, #000000);
+}
+
+h1{
+    font-size: 5rem;
+    font-weight: 700;
+    color: #00e5ff;
+
+}
