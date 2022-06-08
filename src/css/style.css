@@ -16,10 +16,10 @@ body{
 
 .principal .imagem{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     width: 50vw;
 }
 
@@ -30,16 +30,16 @@ body{
 
 .principal .fale-comigo{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     width: 50vw;
 }
 
 .principal .fale-comigo .container{
     color: white;
     width: auto;
-    padding: 0px 40px;
+    padding: 0px 30px;
 }
 
 .principal .fale-comigo .container h1{
@@ -81,7 +81,7 @@ body{
     grid:
     "nome email" 50px
     "assunto assunto" 50px
-    "mensagem mensagem"/ 1fr 1fr;
+    "mensagem mensagem" auto/ minmax(180px, 1fr) minmax(150px, 1fr) ;
     gap: 10px;
 }
 
@@ -154,34 +154,20 @@ select:-webkit-autofill:focus {
 /* RESPONSIVO */
 
 @media(max-width: 1024px){
-
     .principal .imagem img{
         height: 500px;
     }
-
-    .principal .fale-comigo .container .formulario{
-        display: grid;
-        grid:
-        "nome" 50px
-        "email" 50px
-        "assunto" 50px
-        "mensagem"/ 1fr;
-        gap: 10px;
-    }
 }
 
-@media(max-width: 880px){
+@media(max-width: 850px){
     .principal .imagem img{
-        height: 450px;
+        height: 420px;
     }
-    
 }
 
 @media(max-width: 768px){
     .principal{
-        display: flex;
         flex-direction: column-reverse;
-        justify-content: space-around;
         height: 100%;
         width: auto;
     }
@@ -192,39 +178,23 @@ select:-webkit-autofill:focus {
     }
     
     .principal .imagem img{
-        height: 400px;
-    }
-      
-    .principal .fale-comigo{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        width: 50vw;
-    }
-    
-    .principal .fale-comigo .container{
-        width: 100vw;
-        padding: 0px 0px;
-    }
-
-    .principal .fale-comigo .container .formulario{
-        grid:
-        "nome email" 50px
-        "assunto assunto" 50px
-        "mensagem mensagem"/ 1fr 1fr;
-    }
-
-}
-
-@media(max-width: 688px){
-    .principal{
-        flex-direction: column-reverse;
+        height: 550px;
     }
 
     .principal .imagem a{
-        margin-bottom: 100px;
+        margin-bottom: 70px;
     }
+      
+    .principal .fale-comigo{
+        height: 100%;
+        width: 100%;
+    }
+    
+    .principal .fale-comigo .container{
+        width: 100%;
+        margin-top: 70px;
+    }
+
 }
 
 @media(max-width:520px){
@@ -237,12 +207,16 @@ select:-webkit-autofill:focus {
         "mensagem"/ 1fr;
         gap: 10px;
     }
+
+    .principal .imagem img{
+        height: 450px;
+    }
 }
 
 
 @media(max-width: 425px){
     .principal .imagem img{
-        height: 300px;
+        height: 350px;
     }
     .principal .fale-comigo .container h1{
         font-size: 3rem;
@@ -254,3 +228,8 @@ select:-webkit-autofill:focus {
     }
 }
 
+@media(max-width: 320px){
+    .principal .imagem img{
+        height: 320px;
+    }
+}
