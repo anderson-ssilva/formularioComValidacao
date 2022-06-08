@@ -9,7 +9,10 @@ O Formulário é totalmente responsivo adequando-se aos principais dispositivos 
 </p>
 
 <h2>Como utilizar</h2>
-<p>É bem simples! Basta preencher o formulário com seu nome, e-mail, assunto e escrever sua mensagem no ultimo campo. Ao clicar em "Enviar mensagem!" será direcionado a uma página de agradecimento. </p>
+<p>É bem simples! Basta preencher o formulário com seu nome, e-mail, assunto e escrever sua mensagem no ultimo campo. Ao clicar em "Enviar mensagem!" será direcionado a uma página de agradecimento.
+</p>
+
+<img src="src/images/Formulário.gif">
 
 <h2>Autor</h2>
 <p>Anderson S Silva | Frontend Developer Jr</p>
